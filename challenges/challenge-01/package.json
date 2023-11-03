@@ -1,0 +1,13 @@
+{
+  "name": "challenge-01",
+  "version": "1.0.0",
+  "description": "Un espía está enviando mensajes encriptados.",
+  "main": "index.js",
+  "scripts": {
+    "prod": "npx tsc",
+    "dev": "ts-node-dev index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -12,6 +12,6 @@ Solución a los retos de [codember](https://codember.dev/) con TypeScript.
 
 ## Chanllenge table
 
-| Challenge |                                 Solución                                   |
+| Challenge |                                 Solution                                   |
 | :-------: |:--------------------------------------------------------------------------: |
 |    #01    | [TS](challenges/challenge-01/index.ts) |

@@ -26,7 +26,7 @@ async function messages() {
 
     console.log(resultMessage)
   } catch (error) {
-    console.log(error)
+    console.log('This is error -> ', error)
   }
 }
 

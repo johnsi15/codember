@@ -9,8 +9,14 @@
   "scripts": {
     "co": "sui-mono commit"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "codember",
+    "TypeScript",
+    "challenge",
+    "desafíos",
+    "retos"
+  ],
+  "author": "John Serrano",
   "license": "ISC",
   "devDependencies": {
     "@s-ui/mono": "2.41.0",

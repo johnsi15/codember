@@ -8,11 +8,11 @@ Require Node.js v18.15.0
 * `npm install` to install the dependencies
 * `npm run dev` to run development mode of every challenge
 
-Solución a los retos de [codember](https://codember.dev/) con TypeScript.
+Solución a los desafíos de [codember](https://codember.dev/) con TypeScript.
 
 Para obtener información más detallada sobre qué es Codember y conocer en profundidad de qué se trata esta emocionante plataforma, te invito a explorar el artículo que he escrito al respecto: [Descubriendo Codember y sus Desafíos de Programación](https://johnserrano.co/blog/descubriendo-codember-y-sus-desafios-de-programacion).
 
-En el artículo [Descubriendo Codember y sus Desafíos de Programación](https://johnserrano.co/blog/descubriendo-codember-y-sus-desafios-de-programacion) se enceuntran las **soluciones** explicadas a los retos.
+En el artículo [Descubriendo Codember y sus Desafíos de Programación](https://johnserrano.co/blog/descubriendo-codember-y-sus-desafios-de-programacion) se enceuntran las **soluciones** explicadas a los desafíos.
 
 
 ## Chanllenge table

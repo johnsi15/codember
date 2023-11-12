@@ -1,12 +1,24 @@
-function miniCompiler(text: string) {
+import { readFile } from 'node:fs/promises'
+import { resolve } from 'node:path'
+
+async function miniCompiler() {
+  let text = ''
+
+  try {
+    const filePath = resolve('./message_02.txt')
+    text = await readFile(filePath, { encoding: 'utf8' })
+  } catch (error) {
+    console.log('This is error -> ', error)
+  }
+
+  const listSymbols = text.split('')
+
   const operations: Record<string, (count: number) => number> = {
     '&': (count: number) => count,
     '#': (count: number) => count + 1,
     '@': (count: number) => count - 1,
     '*': (count: number) => count * count,
   }
-
-  const listSymbols = text.split('')
 
   let count = 0
   let result = ''
@@ -20,8 +32,6 @@ function miniCompiler(text: string) {
   console.log(result)
 }
 
-const inputText =
-  '&###@&*&###@@##@##&######@@#####@#@#@#@##@@@@@@@@@@@@@@@*&&@@@@@@@@@####@@@@@@@@@#########&#&##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@&' //  result -> 024899455
-// const inputText = '&##&*&@&' //  result -> 0243
-
-miniCompiler(inputText)
+;(async () => {
+  await miniCompiler() // result -> 024899455
+})()

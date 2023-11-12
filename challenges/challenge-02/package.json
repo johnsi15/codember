@@ -1,0 +1,13 @@
+{
+  "name": "challenge-02",
+  "version": "1.0.0",
+  "description": "En el mundo del espionaje, se utiliza un lenguaje de codificación con símbolos que realizan operaciones matemáticas simples.",
+  "main": "index.js",
+  "scripts": {
+    "prod": "npx tsc",
+    "dev": "ts-node-dev index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

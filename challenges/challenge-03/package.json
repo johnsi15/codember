@@ -1,0 +1,14 @@
+{
+  "name": "challenge-03",
+  "version": "1.0.0",
+  "description": "Un grupo de espías ha descubierto que su sistema de cifrado de mensajes está comprometido.",
+  "main": "index.js",
+  "scripts": {
+    "prod": "npx tsc",
+    "dev": "ts-node-dev index.ts",
+    "test": "NODE_ENV=test jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -12,6 +12,8 @@ Solución a los desafíos de [codember](https://codember.dev/) con TypeScript.
 
 Para obtener información más detallada sobre qué es Codember y conocer en profundidad de qué se trata esta emocionante plataforma, te invito a explorar el artículo que he escrito al respecto: [Descubriendo Codember y sus Desafíos de Programación](https://johnserrano.co/blog/descubriendo-codember-y-sus-desafios-de-programacion).
 
+Todos los challenges cuentan con test usando `Jest`.
+
 En el artículo [Descubriendo Codember y sus Desafíos de Programación](https://johnserrano.co/blog/descubriendo-codember-y-sus-desafios-de-programacion) se enceuntran las **soluciones** explicadas a los desafíos.
 
 
@@ -21,3 +23,4 @@ En el artículo [Descubriendo Codember y sus Desafíos de Programación](https:/
 | :-------: |:--------------------------------------------------------------------------: |
 |    #01    | [TS](challenges/challenge-01/index.ts) |
 |    #02    | [TS](challenges/challenge-02/index.ts) |
+|    #03    | [TS](challenges/challenge-03/index.ts) |

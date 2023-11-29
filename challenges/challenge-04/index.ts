@@ -15,38 +15,37 @@ async function filesQuarantine() {
   // const listFileNames = ['xyzz33-xy', 'abcca1-ab1', 'abbc11-ca']
 
   const INDEXFILENAME = 33
-  let validUnchecksum = 0
+  let validUnchecksumCount = 0
 
-  // console.log({ listFileNames })
-  listFileNames.forEach((fileName, index) => {
+  for (const fileName of listFileNames) {
     const [text, unchecksum] = fileName.split('-')
-    // console.log({ text, unchecksum })
-    const notRepeatWord: string[] = []
-    const repeatWord: string[] = []
+
+    const notRepeatWord: Set<string> = new Set()
+    const repeatWord: Set<string> = new Set()
 
     for (let i = 0; i < text.length; i++) {
-      const caracterActual = text[i]
+      const currentCharacter = text[i]
 
       for (let j = i + 1; j < text.length; j++) {
-        const caracterNext = text[j]
-        if (caracterActual === caracterNext) {
-          repeatWord.push(caracterActual)
+        const characterNext = text[j]
+        if (currentCharacter === characterNext) {
+          repeatWord.add(currentCharacter)
         }
       }
-      // console.log(repeatWord.includes(caracterActual))
-      if (!repeatWord.includes(caracterActual)) {
-        notRepeatWord.push(caracterActual)
+
+      if (!repeatWord.has(currentCharacter)) {
+        notRepeatWord.add(currentCharacter)
       }
     }
 
-    // console.log({ notRepeatWord })
-    if (unchecksum === notRepeatWord.join('')) {
-      validUnchecksum++
-      if (validUnchecksum === INDEXFILENAME) {
+    if (unchecksum === [...notRepeatWord].join('')) {
+      validUnchecksumCount++
+      if (validUnchecksumCount === INDEXFILENAME) {
         console.log('valid unchecksum -> ' + unchecksum)
+        break
       }
     }
-  })
+  }
 }
 
 ;(async () => {

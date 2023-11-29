@@ -20,25 +20,12 @@ async function filesQuarantine() {
   for (const fileName of listFileNames) {
     const [text, unchecksum] = fileName.split('-')
 
-    const notRepeatWord: Set<string> = new Set()
-    const repeatWord: Set<string> = new Set()
+    const notRepeatWord = text
+      .split('')
+      .filter((character, _, self) => self.indexOf(character) === self.lastIndexOf(character))
+      .join('')
 
-    for (let i = 0; i < text.length; i++) {
-      const currentCharacter = text[i]
-
-      for (let j = i + 1; j < text.length; j++) {
-        const characterNext = text[j]
-        if (currentCharacter === characterNext) {
-          repeatWord.add(currentCharacter)
-        }
-      }
-
-      if (!repeatWord.has(currentCharacter)) {
-        notRepeatWord.add(currentCharacter)
-      }
-    }
-
-    if (unchecksum === [...notRepeatWord].join('')) {
+    if (unchecksum === notRepeatWord) {
       validUnchecksumCount++
       if (validUnchecksumCount === INDEXFILENAME) {
         console.log('valid unchecksum -> ' + unchecksum)

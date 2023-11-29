@@ -1,12 +1,13 @@
-import { encryptionPolicies } from './encryptionPolicies'
+import { filesQuarantine } from './filesQuarantine'
 
 describe('Encrypted messages', () => {
   test(`It should return a password invalid`, () => {
-    const PASSWORD_TEXT = '2-4 f: fgff\n4-5 z: zzzsg\n1-6 h: hhhhhh'
-    const INVALID_PASSWORD = 'zzzsg'
-    const { invalidPassword, validCountPassword } = encryptionPolicies(PASSWORD_TEXT)
+    const LISTFILENAMES = ['xyzz33-xy', 'abcca1-ab1', 'abbc11-ca']
+    const INVALID_UNCHECKSUM = 'ab1'
+    const { validUnchecksum, invalidUnchecksum } = filesQuarantine(LISTFILENAMES)
 
-    expect(invalidPassword).toBe(INVALID_PASSWORD)
-    expect(validCountPassword).toBe(2)
+    expect(validUnchecksum).toBeDefined()
+    expect(invalidUnchecksum).toBe(INVALID_UNCHECKSUM)
+    // expect(validCountPassword).toBe(2)
   })
 })

@@ -1,10 +1,8 @@
-export function filesQuarantine(listFileNames: string[]) {
-  console.log(listFileNames)
-  const INDEXFILENAME = 1
+export function filesQuarantine(listFileNames: string[], indexFileName: number) {
+  const INDEXFILENAME = indexFileName
   let validUnchecksumCount = 0
 
-  let validUnchecksum = ''
-  let invalidUnchecksum = ''
+  let validUnchecksum = null
 
   for (const fileName of listFileNames) {
     const [text, unchecksum] = fileName.split('-')
@@ -15,15 +13,12 @@ export function filesQuarantine(listFileNames: string[]) {
       .join('')
 
     if (unchecksum === notRepeatWord) {
-      validUnchecksumCount++
-      console.log('ok  -> ' + unchecksum)
       if (validUnchecksumCount === INDEXFILENAME) {
+        validUnchecksumCount++
         validUnchecksum = unchecksum
-      } else {
-        invalidUnchecksum = unchecksum
       }
     }
   }
 
-  return { validUnchecksum, invalidUnchecksum }
+  return { validUnchecksum }
 }

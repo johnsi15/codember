@@ -6,6 +6,7 @@ describe('Encrypted messages', () => {
     const LISTFILENAMES = ['xyzz33-xy', 'abcca1-ab1', 'abbc11-ca']
     const { validUnchecksum } = filesQuarantine(LISTFILENAMES, 2)
 
+    expect(validUnchecksum).toBeDefined()
     expect(validUnchecksum).toBeNull()
   })
 

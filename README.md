@@ -25,3 +25,4 @@ En el artículo [Descubriendo Codember y sus Desafíos de Programación](https:/
 |    #02    | [TS](challenges/challenge-02/index.ts) |
 |    #03    | [TS](challenges/challenge-03/index.ts) |
 |    #04    | [TS](challenges/challenge-04/index.ts) |
+|    #05    | [TS](challenges/challenge-05/index.ts) |

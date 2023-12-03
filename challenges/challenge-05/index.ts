@@ -23,8 +23,6 @@ async function databaseAttacked() {
   listFileUsers.forEach(user => {
     const [id, username, email, ...rest] = user.split(',')
 
-    // console.log({ rest })
-
     const regexAlfaNumber = new RegExp(/^[A-Za-z0-9]+$/, 'g')
     const regexEmail = new RegExp(/^\w+@[a-z]+\.[a-z]{2,3}/, 'g')
     const regexNumber = new RegExp(/^[0-9]+$/, 'g')
@@ -40,8 +38,6 @@ async function databaseAttacked() {
       location = rest[0]
     }
 
-    console.log(id, username, email, age, location)
-
     let invalidUser = false
 
     if (!id || !username || !email) {
@@ -55,17 +51,13 @@ async function databaseAttacked() {
     }
 
     if (invalidUser) {
-      // console.log('This is invalid user -> ', user)
-      console.log('This is invalid user -> ', username)
       messageHidden.push(username.charAt(0))
     }
-
-    console.log('-'.repeat(50))
   })
 
   console.log(messageHidden.join(''))
 }
 
 ;(async () => {
-  await databaseAttacked() // result ->
+  await databaseAttacked() // result -> youh4v3beenpwnd
 })()

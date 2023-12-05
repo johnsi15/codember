@@ -1,19 +1,7 @@
-import { readFile } from 'node:fs/promises'
-import { resolve } from 'node:path'
-
-async function databaseAttacked() {
-  let readFilesDbAttacked = ''
-
-  try {
-    const filePath = resolve('./database_attacked.txt')
-    readFilesDbAttacked = await readFile(filePath, { encoding: 'utf8' })
-  } catch (error) {
-    console.log('This is error read file -> ', error)
-  }
+export function databaseAttacked(readFilesDbAttacked: string) {
+  const messageHidden: string[] = []
 
   const listFileUsers = readFilesDbAttacked.split('\n')
-
-  const messageHidden: string[] = []
 
   listFileUsers.forEach(user => {
     const [id, username, email, ...rest] = user.split(',')
@@ -48,9 +36,5 @@ async function databaseAttacked() {
     }
   })
 
-  console.log(messageHidden.join(''))
+  return messageHidden.join('')
 }
-
-;(async () => {
-  await databaseAttacked() // result -> youh4v3beenpwnd
-})()

@@ -1,4 +1,4 @@
-Desafío 1: ¡Consigue acceso a la terminal!
+# Desafío 1: ¡Consigue acceso a la terminal!
 Estamos en problemas. La IA ΩMEGA está descontrolada. Por suerte, he conseguido añadir una contraseña para evitar que acceda a esta terminal. El sistema no es difícil, pero nos debería dar el tiempo suficiente.
 
 Te voy a dar una lista de números y, al lado, los movimientos que debes hacer en estos números. Imagina los candados numéricos esos que van con combinaciones.

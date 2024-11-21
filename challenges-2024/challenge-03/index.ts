@@ -1,38 +1,37 @@
 import fs from 'node:fs'
 
 function endPath() {
-  fs.readFile('./trace-test.txt', 'utf8', (err, data) => {
+  fs.readFile('./trace.txt', 'utf8', (err, data) => {
     if (err) {
       console.error(err)
       return
     }
 
     const instructionsList = data.split('\n')
+    let total = 0
+    let totalLast = 0
 
-    for (const instruction of instructionsList) {
-      console.log({ instruction })
+    for (let index = 0; index < instructionsList.length; index++) {
+      const instruction = instructionsList[index]
       const jumps = instruction.split(' ').map(i => Number(i))
-      console.log({ jumps })
-      // 1 2 4 1 -2
-
-      let result = 0
-      let m = jumps[0] // 1
-      console.log({ m, len: jumps.length })
+      let step = 0
       let i = 0
-      // 1 -2 5
-      while (i < jumps.length && Math.sign(i) !== -1) {
-        console.log('paso...')
+
+      do {
         const jump = jumps[i]
         jumps[i] = jump + 1
-
         i = i + jump
-        result = Math.abs(jump)
+        step++
+      } while (i < jumps.length && i >= 0)
+
+      if (index === instructionsList.length - 1) {
+        totalLast = step
       }
 
-      console.log({ jumpsResult: jumps, result })
+      total += step
     }
 
-    // console.log({ instructions })
+    console.log({ total, totalLast })
   })
 }
 

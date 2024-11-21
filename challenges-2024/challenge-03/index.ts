@@ -14,30 +14,22 @@ function endPath() {
       const jumps = instruction.split(' ').map(i => Number(i))
       console.log({ jumps })
       // 1 2 4 1 -2
-      for (let i = 0; i < jumps.length; ) {
-        console.log({ i, jump: jumps[i] })
-        const jump = jumps[i]
 
+      let result = 0
+      let m = jumps[0] // 1
+      console.log({ m, len: jumps.length })
+      let i = 0
+      // 1 -2 5
+      while (i < jumps.length && Math.sign(i) !== -1) {
+        console.log('paso...')
+        const jump = jumps[i]
         jumps[i] = jump + 1
 
-        if (Math.sign(jump) !== -1) {
-          console.log('paso ', i)
-          i = i + jump
-        } else {
-          i = i + jump
-        }
-
-        // falta sumar el valor que de instruct -> Avanza una posición y la instrucción se convierte en 2
-
-        console.log({ i })
-        if (i === 5) break
-
-        if (jump > i) {
-          console.log('salio...')
-        }
+        i = i + jump
+        result = Math.abs(jump)
       }
 
-      console.log({ jumpsResult: jumps })
+      console.log({ jumpsResult: jumps, result })
     }
 
     // console.log({ instructions })

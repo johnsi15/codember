@@ -167,16 +167,7 @@ En el artículo [Descubriendo Codember y sus Desafíos de Programación](https:/
 
 ## More challenges
 
-<style>
-  ul.custom-list {
-    display: flex;
-    gap: 15px;
-    list-style: none;
-    padding: 0;
-  }
-</style>
-
-<ul class="custom-list"> 
+<ul> 
   <li> 
     <a href="https://github.com/johnsi15/adventjs" target="_blank" rel="noopener noreferrer">
       <img src="https://adventjs.dev/og.jpg" title="AdventJs" width="300"/>

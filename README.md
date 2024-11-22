@@ -167,20 +167,20 @@ En el artículo [Descubriendo Codember y sus Desafíos de Programación](https:/
 
 ## More challenges
 
-<ul> 
-  <li> 
-    <a href="https://github.com/johnsi15/adventjs" target="_blank" rel="noopener noreferrer">
-      <img src="https://adventjs.dev/og.jpg" title="AdventJs" width="300"/>
-    </a>
-  </li>
-  <li> 
-    <a href="https://github.com/johnsi15/codember" target="_blank" rel="noopener noreferrer">
-      <img src="https://codember.dev/og-image.jpg" title="AdventJs" width="300"/>
-    </a>
-  </li>
-  <li> 
-    <a href="https://github.com/johnsi15/halloween-retos" target="_blank" rel="noopener noreferrer">
-      <img src="https://halloween.dev/og.jpg" title="AdventJs" width="300"/>
-    </a>
-  </li>
- </ul>
+<div> 
+  <a href="https://github.com/johnsi15/adventjs" target="_blank" rel="noopener noreferrer">
+    <img src="https://adventjs.dev/og.jpg" title="AdventJs" width="300"/>
+  </a>
+</div>
+
+<div> 
+  <a href="https://github.com/johnsi15/codember" target="_blank" rel="noopener noreferrer">
+    <img src="https://codember.dev/og-image.jpg" title="AdventJs" width="300"/>
+  </a>
+</div>
+
+<div> 
+  <a href="https://github.com/johnsi15/halloween-retos" target="_blank" rel="noopener noreferrer">
+    <img src="https://halloween.dev/og.jpg" title="AdventJs" width="300"/>
+  </a>
+</div>

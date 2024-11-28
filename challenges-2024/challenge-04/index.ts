@@ -3,8 +3,6 @@ import fs from 'node:fs'
 function getNetworkSaves() {
   fs.readFile('./network.txt', 'utf8', (err, data) => {
     const networks = JSON.parse(data)
-    console.log({ networks })
-    // const nodos = new Map()
     interface Nodos {
       [key: string]: number[]
     }
@@ -15,7 +13,6 @@ function getNetworkSaves() {
 
     for (let i = 0; i < networks.length; i++) {
       const nodo = networks[i]
-      console.log({ nodo })
       nodo.forEach((n: number) => {
         if (n in nodos) {
           nodos[n] = [...nodos[n], i]
@@ -25,28 +22,23 @@ function getNetworkSaves() {
       })
     }
 
-    console.log({ nodos })
-    let indicesToRemove: number[] = []
+    const indicesToRemove = new Set<number>()
 
     for (const key in nodos) {
       if (nodos[key].length > 1) {
         nodos[key].forEach(i => {
-          indicesToRemove.push(i)
+          indicesToRemove.add(i)
         })
       }
     }
 
-    indicesToRemove = [...new Set(indicesToRemove)]
-    indicesToRemove.sort((a, b) => b - a)
+    const indicesToRemoveSorted = [...indicesToRemove].sort((a, b) => b - a)
 
-    indicesToRemove.forEach(index => {
+    indicesToRemoveSorted.forEach(index => {
       networks.splice(index, 1)
     })
 
-    networks.forEach((n: number[]) => {
-      // console.log(n.join(','))
-      result += n.join(',') + ','
-    })
+    result = networks.map((n: number[]) => n.join(',')).join(',')
 
     console.log({ result })
   })

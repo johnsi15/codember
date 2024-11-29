@@ -36,6 +36,8 @@ En el artículo [Descubriendo Codember y sus Desafíos de Programación](https:/
 |    #01    | [TS](challenges-2024/challenge-01/index.ts) |
 |    #02    | [TS](challenges-2024/challenge-02/index.ts) |
 |    #03    | [TS](challenges-2024/challenge-03/index.ts) |
+|    #04    | [TS](challenges-2024/challenge-04/index.ts) |
+|    #05    | [TS](challenges-2024/challenge-05/index.ts) |
 
 ## Secrets
 
@@ -161,6 +163,36 @@ En el artículo [Descubriendo Codember y sus Desafíos de Programación](https:/
 
 - Para este secreto necesitas haber resuelto el secreto #09.
 - Usa el comando `ping` a una página web de midudev en concreto.
+
+<br/>
+</details>
+<details>
+<summary>🐈 11) Midu Gato</summary>
+
+<br/>
+
+- ¿Hay algo inyectado en el código fuente HTML?.
+- Revisar el código HTML de codember.
+
+<br/>
+</details>
+<details>
+<summary>😸 12) Miau</summary>
+
+<br/>
+
+- Usar el comando mail y revisar el primer email.
+- Busca en los metadatos de la foto.
+
+<br/>
+</details>
+<details>
+<summary>🟠 13) Mars.code</summary>
+
+<br/>
+
+- Usar el comando mail y revisa todos los emails.
+- Encontrar las cordenadas para responder.
 
 <br/>
 </details>

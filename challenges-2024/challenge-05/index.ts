@@ -10,20 +10,31 @@ function primeNumbers(nodos: number[]) {
     if (num <= 3) return true // 2 y 3 son primos
     if (num % 2 === 0 || num % 3 === 0) return false
 
-    for (let i = 5; i * i < num; i += 6) {
+    for (let i = 5; i * i <= num; i += 6) {
       if (num % i === 0 || num % (i + 2) === 0) return false
     }
 
     return true
   }
 
-  nodos.forEach((nodo, index) => {
+  let threethNumber = 0
+  let count = 0
+
+  nodos.forEach(nodo => {
     if (isPrime(nodo)) {
       console.log(`El nodo ${nodo} es primo`)
+      const digit = nodo.toString().split('')
+      const sum = digit.reduce((acc, curr) => acc + parseInt(curr), 0)
+      if (isPrime(sum)) {
+        count++
+        if (count === 3) {
+          threethNumber = nodo
+        }
+      }
     }
   })
 
-  console.log({ nodos })
+  console.log(`submit ${count}-${threethNumber}`)
 }
 
 primeNumbers(nodos)
